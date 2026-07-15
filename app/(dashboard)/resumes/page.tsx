@@ -88,7 +88,7 @@ export default function ResumesPage() {
             className="pl-9 h-10 bg-zinc-900 border-zinc-800 text-white placeholder:text-zinc-600"
           />
         </div>
-        <Select value={statusFilter} onValueChange={setStatusFilter}>
+        <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value ?? "all")}>
           <SelectTrigger className="w-full sm:w-44 h-10 bg-zinc-900 border-zinc-800 text-white">
             <SelectValue placeholder="Status" />
           </SelectTrigger>

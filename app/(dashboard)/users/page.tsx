@@ -115,7 +115,7 @@ export default function UsersPage() {
             className="pl-9 h-10 bg-zinc-900 border-zinc-800 text-white placeholder:text-zinc-600"
           />
         </div>
-        <Select value={planFilter} onValueChange={(v) => { setPlanFilter(v); setPage(1); }}>
+        <Select value={planFilter} onValueChange={(v) => { setPlanFilter(v ?? "all"); setPage(1); }}>
           <SelectTrigger className="w-full sm:w-44 h-10 bg-zinc-900 border-zinc-800 text-white">
             <Filter className="h-4 w-4 mr-1 text-zinc-500" />
             <SelectValue placeholder="Filter by plan" />
